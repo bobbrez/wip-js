@@ -10,3 +10,7 @@
 .wip.hidden {
   visibility: hidden;
 }
+
+.test {
+  background: #f00;
+}
