@@ -1,31 +1,44 @@
-wip.js
-======
-A jQuery plugin for quickly displaying work in progress. 
+# jQuery.wip.js
 
-Add the css class 'wip' to any elements that are currently under
-development. When reviewing the page, use ctrl+w on the page
+## Introduction
 
-Originally based on http://robots.thoughtbot.com/post/8734502366/wip-it-wip-it-good
+**jQuery.wip.js** is a simple plugin designed to allow you to quickly
+display what site elements are still under development and what is
+functional. Tag any elements that exist but are not yet functional with
+the css class `wip` (work in progress) and then use `ctrl+w` to cycle between normal,
+highlighted and hidden. When hidden, the elements become invisiable but
+retain their spacing. This gives a conceptual view of what pieces are
+missing.
 
-Groups
-------
-Beyond just using 'wip', using 'wip_0' through 'wip_9' allows groups of
-elements to be cycled together though ctrl+0 though ctrl+9 in addition
-to being globally cycled with ctrl+w
+## Usage
 
+This library must be included on your page after the jquery plugin. You can include both with:
 
-PIW (Potentally Included Work)
-------------------------------
-For elements that are in progress and may or may not end up in the
-deliverable, use the css class 'piw'. When cycled, it will force a reflow when cycled.
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<script src="path_to_library/jquery.wip.js"></script>
 
-Installation
-============
-1. Include the javascript and css wip files (wip.js and wip.css).
-2. Enable the jquery plugin 
+Initialize this plugin by calling `.wip()` in `jQuery.ready` (or the `$(function(){})` shorthand method).
 
-````javascript
-$(document).ready(function(){
-  $.wip();
-});
-````
+## Potentally Included Work (PIW)
+
+Similar to WIPs, PIWs are elements that are under development. The
+difference is that PIWs may or may not exist in the end product. To
+display this, when PIWs are hidden, they trigger a flow change. This gives a
+conceptual view of what the page will look like if the element was never
+added.
+
+PIWs are cycled with `ctrl+p`
+
+## Groups
+
+If you have groups of elements that are related and are works in
+progress(i.e. social aspects, user accounts, etc...) then you can mark
+them as specific wip groups 0-9. 
+
+All elements with the class `wip` will be cycled with `ctrl+w`.
+Alternatively, any classes with `wip_0` though `wip_9` will all be cycled with
+`ctrl+w` or individual groups will cycle with `crtl+0` though `crtl+9`.
+
+Likewise, all elements with the class of `piw` are cycled with `ctrl+p`.
+PIWs can be groupd like WIPs but to cycle individual groups, use
+`ctrl+shift+0` though `ctrl+shift+9`
