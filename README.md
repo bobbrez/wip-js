@@ -10,6 +10,8 @@ highlighted and hidden. When hidden, the elements become invisiable but
 retain their spacing. This gives a conceptual view of what pieces are
 missing.
 
+Based on a post from [ToughtBot](http://robots.thoughtbot.com/post/8734502366/wip-it-wip-it-good#disqus_thread)
+
 ## Usage
 
 This library must be included on your page after the jquery plugin. You can include both with:
