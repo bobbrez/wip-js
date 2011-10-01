@@ -21,8 +21,8 @@ deliverable, use the css class 'piw'. When cycled, it will force a reflow when c
 
 Installation
 ============
-# Include the javascript and css wip files (wip.js and wip.css).
-# Enable the jquery plugin 
+1. Include the javascript and css wip files (wip.js and wip.css).
+2. Enable the jquery plugin 
 
 ````javascript
 $(document).ready(function(){
