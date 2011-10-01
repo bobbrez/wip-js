@@ -17,7 +17,7 @@ This library must be included on your page after the jquery plugin. You can incl
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 	<script src="path_to_library/jquery.wip.js"></script>
 
-Initialize this plugin by calling `.wip()` in `jQuery.ready` (or the `$(function(){})` shorthand method).
+Initialize this plugin by calling `$.wip()` in `jQuery.ready` (or the `$(function(){})` shorthand method).
 
 ## Potentally Included Work (PIW)
 
