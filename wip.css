@@ -1,0 +1,12 @@
+.wip {
+  visibility: visible;
+}
+
+.wip.highlight {
+  outline: 1px solid #ff0 !important;
+  background: #ff0;
+}
+
+.wip.hidden {
+  visibility: hidden;
+}
