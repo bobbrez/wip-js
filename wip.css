@@ -11,6 +11,19 @@
   visibility: hidden;
 }
 
+.piw {
+  visibility: visible;
+}
+
+.piw.highlight {
+  outline: 1px solid #0ff !important;
+  background: #0ff;
+}
+
+.piw.hidden {
+  display: none;
+}
+
 .test {
   background: #f00;
 }

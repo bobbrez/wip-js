@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var wip_status = 0;
+  var wip_status = [0, 0, 0, 0, 0, 0, 0, 0, 0 ,0];
 
   jQuery.expr[':'].regex = function(elem, index, match) {
       var matchParams = match[3].split(','),
@@ -15,8 +15,8 @@ $(document).ready(function() {
       return regex.test(jQuery(elem)[attr.method](attr.property));
   }
 
-  wipit = function(e) {
-    switch(wip_status){
+  wipit = function(e, index) {
+    switch(wip_status[index]){
       case 0:
         e.addClass('highlight');
         e.removeClass('hidden');
@@ -28,12 +28,15 @@ $(document).ready(function() {
         e.removeClass('hidden');
         e.removeClass('highlight');
     }
-    wip_status = (wip_status + 1) % 3;
+    wip_status[index] = (wip_status[index] + 1) % 3;
   }
 
   $('html').keydown(function(e) {
     if(e.ctrlKey) {
       element = null;
+      index = 0;
+
+      console.log(e.which);
 
       if(e.which > 47 && e.which < 58) {
         index = e.which - 48;
@@ -44,12 +47,16 @@ $(document).ready(function() {
         element = $('.wip');
       }
 
+      if(e.which === 80){
+        element = $('.piw');
+      }
+
       if(element) {
-        console.log(element);
-        wipit(element);
+        wipit(element, index);
       }
     }
   });
 
   $(':regex(class,^wip_[1-9])').addClass('wip');
+  $(':regex(class,^piw_[1-9])').addClass('piw');
 });
