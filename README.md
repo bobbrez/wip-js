@@ -10,7 +10,7 @@ highlighted and hidden. When hidden, the elements become invisiable but
 retain their spacing. This gives a conceptual view of what pieces are
 missing.
 
-Based on a post from [ToughtBot](http://robots.thoughtbot.com/post/8734502366/wip-it-wip-it-good#disqus_thread)
+Based on a post from [ThoughtBot](http://robots.thoughtbot.com/post/8734502366/wip-it-wip-it-good#disqus_thread)
 
 ## Usage
 
